@@ -1,0 +1,15 @@
+*~
+*.resbin
+*.prebin
+*.o
+*.stderr
+*.map
+*.lst
+*.memreport*
+calc_*
+.ipynb_checkpoints
+*.json
+data/*.output
+data/*.map
+data/*.lst
+data/*~
