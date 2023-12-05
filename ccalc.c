@@ -431,20 +431,12 @@ writeResults(long long result) {
     fprintf(stderr, "ERROR: write results failed\n");
   }
   // add the rest of the writes of the data to standard out
-  //if (write(1, &SUM_POSITIVE, sizeof(SUM_POSITIVE)) != sizeof(&SUM_POSITIVE)) {
-  //fprintf(stderr, "ERROR: write SUM_POSITIVE failed\n");
-  //}
-  //if (write(1, &SUM_NEGATIVE, sizeof(SUM_NEGATIVE)) != sizeof(&SUM_NEGATIVE)) {
-  //fprintf(stderr, "ERROR: write SUM_NEGATIVE failed\n");
-  //}
-  //write(1, &CALC_DATA_BEGIN, &CALC_DATA_END-&CALC_DATA_BEGIN);
-  //write(1, &result, sizeof(result));
-  write(1, &SUM_POSITIVE, sizeof(SUM_POSITIVE));
-  write(1, &SUM_NEGATIVE, sizeof(SUM_NEGATIVE));
-  //write(1, &result, sizeof(result));
+  if (write(1, &SUM_POSITIVE, sizeof(SUM_POSITIVE)) != sizeof(&SUM_POSITIVE)) {
+    fprintf(stderr, "ERROR: write SUM_POSITIVE failed\n");
+  }
+  if (write(1, &SUM_NEGATIVE, sizeof(SUM_NEGATIVE)) != sizeof(&SUM_NEGATIVE)) {
+    fprintf(stderr, "ERROR: write SUM_NEGATIVE failed\n");
+  }
   write(1, &CALC_DATA_BEGIN, ((long)&CALC_DATA_END - (long)&CALC_DATA_BEGIN));
-  //printf("\n0x%x\n",&CALC_DATA_BEGIN);
-  //printf("0x%x\n",&CALC_DATA_END);
-  //printf("0x%x",&CALC_DATA_END-&CALC_DATA_BEGIN);
 }
 
