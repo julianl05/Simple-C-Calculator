@@ -422,8 +422,7 @@ printResults(long long result)
   // use fprintf to print SUM_POSITIVE and SUM_NEGATIVE
   // note - space separate the values and put a new line at the end.
   // HINT: the format string for a long long decimal is "%lld" and a newline is "\n"
-  // force crash -- replace with your code here
-  fprintf(stdout, "%lld %lld\n", SUM_POSITIVE, SUM_NEGATIVE);
+  fprintf(stderr, "%lld %lld\n", SUM_POSITIVE, SUM_NEGATIVE);
 }
 
 void
@@ -432,7 +431,9 @@ writeResults(long long result) {
     fprintf(stderr, "ERROR: write results failed\n");
   }
   // add the rest of the writes of the data to standard out
-  // force crash -- replace with your code here
   write(1, &result, sizeof(result));
+  write(1, &SUM_POSITIVE, sizeof(SUM_POSITIVE));
+  write(1, &SUM_NEGATIVE, sizeof(SUM_NEGATIVE));
+  write(1, &, sizeof(result));
 }
 
