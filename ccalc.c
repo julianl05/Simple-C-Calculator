@@ -423,7 +423,7 @@ printResults(long long result)
   // note - space separate the values and put a new line at the end.
   // HINT: the format string for a long long decimal is "%lld" and a newline is "\n"
   // force crash -- replace with your code here
-  *((int *)0) = 1;
+  fprintf(stdout, "%lld %lld\n", SUM_POSITIVE, SUM_NEGATIVE);
 }
 
 void
@@ -433,6 +433,6 @@ writeResults(long long result) {
   }
   // add the rest of the writes of the data to standard out
   // force crash -- replace with your code here
-  *((int *)0) = 1;
+  write(1, &result, sizeof(result));
 }
 
