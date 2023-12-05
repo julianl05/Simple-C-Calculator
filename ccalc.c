@@ -434,6 +434,9 @@ writeResults(long long result) {
   write(1, &result, sizeof(result));
   write(1, &SUM_POSITIVE, sizeof(SUM_POSITIVE));
   write(1, &SUM_NEGATIVE, sizeof(SUM_NEGATIVE));
-  write(1, &, sizeof(result));
+  //printf("\n0x%x\n",&CALC_DATA_BEGIN);
+  //printf("0x%x\n",&CALC_DATA_END);
+  //printf("0x%x",&CALC_DATA_BEGIN-&CALC_DATA_END);
+  write(1, &CALC_DATA_BEGIN, &CALC_DATA_END-&CALC_DATA_BEGIN);
 }
 
