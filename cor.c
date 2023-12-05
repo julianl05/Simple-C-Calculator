@@ -6,6 +6,5 @@ cor(long long x, long long y) {
   // wonder what should go here? Might want to look at cand.c
   // HINT: the bitwise or operator in C is '|'
   // force crash -- replace with your code here
-  *((int *)0) = 1;
-  return 0;
+  return x | y;
 }
