@@ -19,8 +19,7 @@ carraysum(long long cres, long long len, long long *array) {
 	   " : array[%lld]=%lld\n",
 	   len, cres, SUM_POSITIVE, SUM_NEGATIVE, i, array[i]);
     // call csum on the ith element of the array and update cres
-    // force crash -- replace with your code here
-    *((int *)0) = 1;
+    cres = csum(cres,array[i]);
   }
   VPRINT("  FINAL: len:%lld cres:%lld SUM_POSITIVE=%lld SUM_NEGATIVE=%lld"
 	 " : array[%lld]=%lld\n",
