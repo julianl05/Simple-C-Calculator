@@ -30,7 +30,7 @@ for (i=0; cptr[i] != 0; i++) {
       // we found a value that within the range of lower case ascii
       // we need to overwrite the value at cptr[i] with the upper case version
        // HINT: what does "c - ('a' - 'A')" do?
-      c = c - ('a'-'A');
+      cptr[i]  = c - ('a' - 'A');
     }
   }
   return cres + i;
