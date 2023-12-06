@@ -18,8 +18,10 @@ clistsum(long long cres, void *head) {
   // do: cres = csum(cres, node->v)
   // To get you started  we already have set a "node" variable above
   // that is set pointing to the first node on the list
-  *((int *)0) = 1;
-
+  while (node != NULL){
+    cres = csum(cres, node->v);
+    node = node->next
+  }
   VPRINT("  FINAL cres:%lld SUM_POSITIVE=%lld SUM_NEGATIVE=%lld : node:%p\n",
 	 cres, SUM_POSITIVE, SUM_NEGATIVE, node);
   return cres;
