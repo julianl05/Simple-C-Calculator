@@ -29,9 +29,8 @@ for (i=0; cptr[i] != 0; i++) {
     if ((c >= 'a') && (c <= 'z')) {
       // we found a value that within the range of lower case ascii
       // we need to overwrite the value at cptr[i] with the upper case version
-      // HINT: what does "c - ('a' - 'A')" do?
-      // force crash -- replace with your code here
-      *((int *)0) = 1;
+       // HINT: what does "c - ('a' - 'A')" do?
+      c = c - ('a'-'A');
     }
   }
   return cres + i;
