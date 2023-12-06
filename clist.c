@@ -29,7 +29,7 @@ clist(long long cres, void *head, calc_simple_func_ptr func)
 	   node->next);
     // You need to invoke the function pointed to by func and set cres
     // to the value it returns:  HINT: See how carry.c does this
-    *((int *)0) = 1;
+    cres = func(cres,node->v);
   }
   
   VPRINT("  FINAL func:%p cres:%lld SUM_POSITIVE=%lld "
