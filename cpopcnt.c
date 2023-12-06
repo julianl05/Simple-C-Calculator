@@ -32,11 +32,10 @@ cpopcnt(long long result, long long y)
   //             and zero if the bit is zero
   //
   // Using the above, can you write a very small loop to count the
-  // number of ones in v?
-
-  // force program to crash here by trying to read address zero
-  // remove this code and replace with code that calculates popcnt
-  cnt = *((long long *)0);
-
+  // number of ones in v?    
+  while (v>0){
+    cnt = cnt + (v & 0x1);
+    v=v>>1;
+  }
   return result + cnt;
 }
