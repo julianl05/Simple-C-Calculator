@@ -399,7 +399,7 @@ cmd2func(char c) {
     break;
   case 'S':
     // this smells fishy ;-)
-    func = NULL;
+    func = &csum;
     break;
   case 'U':
     func = (calc_simple_func_ptr)&cupper;
