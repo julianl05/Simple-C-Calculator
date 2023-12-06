@@ -20,10 +20,7 @@ catoq(long long cres, char *cptr)
   // strings that encode numbers into a binary value. Lookup atoll and
   // use it here to do what is a pain to write ourselves in assembly.
   // eg.  a single call to atoll will do all the work
-
-  // force crash -- replace with your code here
-  *((int *)0) = 1;
-
+  y = atoll(cptr);
   // now that we have the value as a binary, use csum to do the
   // remaining work
   cres = csum(cres, y);
