@@ -55,7 +55,6 @@ clistsum_read(void)
     //   - malloc will get memory from the heap and return the address.
     //   - remember you can use sizeof(<type>) to determine the size of any C type including
     //     structures that have been declared -- like struct Node ;-)
-    // force crash here : replace with your code
     if (head == NULL){
       head = malloc (sizeof(struct Node));
       head->v = val;
@@ -81,8 +80,9 @@ void clistsum_free(void *head)
   // Time to iterate over the list and free the memory back to the heap
   while (hnode != NULL) {
     // see man free and examples in C Book
-    // force crash -- replace with your code here
-    *((int *)0) = 1;
+    tmp = hnode;
+    hnode = hnode->next;
+    free(tmp);
   }
   return;
 }
