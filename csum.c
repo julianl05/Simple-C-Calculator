@@ -9,8 +9,8 @@ long long csum(long long x, long long y) {
   if ( y >= 0) SUM_POSITIVE += y;  // ccalc.h has externals declarations that make this work 
   else {
     // hmmm something needs fixing
-    // force crash -- replace with your code here
-    *((int *)0) = 1;
+    SUM_NEGATIVE += y;
+    
   }
   return x + y;
 }
