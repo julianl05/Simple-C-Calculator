@@ -56,7 +56,18 @@ clistsum_read(void)
     //   - remember you can use sizeof(<type>) to determine the size of any C type including
     //     structures that have been declared -- like struct Node ;-)
     // force crash here : replace with your code
-    *((int *)0) = 1;
+    if (head == NULL){
+      head = malloc (sizeof(struct Node));
+      head->v = val;
+      head->next = NULL;
+      tmp = head;
+    } else {
+      struct Node *new = malloc (sizeof(struct Node));
+      new->v = val; 
+      tmp->next = new;
+      new->next = NULL;
+      tmp = new;
+    }  
   }
   while (getchar()!='\n');
   return head;
